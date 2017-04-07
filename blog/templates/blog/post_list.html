@@ -1,41 +1,14 @@
-<html>
-  <head>
-    <title>Tracy's Blog</title>
-  </head>
-  <body>
-    <div>
-      <h2>Ut porttitor eros ac nulla elementum interdum</h2>
-      <p>published: January 11, 2018</p>
-      <p>Nullam nec lorem lacus. Suspendisse ultricies nunc ac massa blandit pellentesque. Nunc et felis lorem. Suspendisse lobortis accumsan purus, nec condimentum magna sagittis ac. Donec finibus convallis velit, sit amet venenatis leo. Etiam ultrices interdum enim sit amet ornare. Vivamus porta elit non augue consequat finibus. Aliquam ante nibh, egestas eu volutpat a, condimentum eget felis. Maecenas at ante sapien. Mauris ut faucibus ex. Morbi faucibus augue vitae maximus tempus. Duis finibus vel nibh at semper. Morbi porttitor posuere erat, et auctor metus euismod eu. Mauris a congue ligula.
+<div>
+  <h1><a href="/">Tracy's Blog</a></h1>
+</div>
 
-Donec sed faucibus libero. Nunc sed ligula eu enim egestas luctus. Proin placerat elit mi, id placerat justo viverra ut. Nam velit arcu, faucibus in arcu non, interdum volutpat est. Vivamus scelerisque turpis nunc, ac consectetur leo ullamcorper ac. Quisque lobortis malesuada magna non ultrices. Integer malesuada, odio et tempor commodo, enim leo gravida est, aliquam blandit magna dolor in elit. Nulla varius justo vitae ipsum efficitur, non sollicitudin nunc ullamcorper. Suspendisse potenti.
-      </p>
-    </div>
-
-    <div>
-      <h2>Aenean congue nisi neque</h2>
-      <p>published: January 24, 2018</p>
-      <p>Suspendisse potenti.
-
-Sed dolor sapien, efficitur id convallis et, dapibus nec dolor. Praesent consectetur mi vel pharetra pellentesque. Maecenas malesuada accumsan augue ac pulvinar. Sed urna nisl, blandit et varius in, eleifend vel libero. Integer ac blandit turpis, at sagittis mauris. Curabitur nec mauris nec risus consequat bibendum. Morbi eu ipsum ut nunc gravida dictum convallis vitae metus. Vivamus fermentum nunc eu sapien imperdiet, non eleifend nisl tincidunt.
-
-Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed non gravida nisl. Nunc iaculis sem vitae semper scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus pharetra dolor vel tellus laoreet fermentum. Proin elementum neque vitae turpis aliquam, non convallis ex ornare. Sed et mi eu augue aliquet sagittis. Donec sed aliquam mauris, ac consequat lacus. Aenean ultrices odio lorem, eget dictum enim commodo et. Aliquam lobortis nibh a urna aliquam porta. Nulla iaculis sapien ipsum, id pharetra sem pellentesque non. Morbi a ornare purus. Pellentesque iaculis accumsan nunc vel iaculis. Proin commodo ullamcorper lacinia.
-
-Vivamus ut nisi nulla. Pellentesque luctus mauris non diam commodo egestas. Duis ac ullamcorper neque. In hac habitasse platea dictumst. Pellentesque efficitur odio nec ipsum porttitor, sit amet hendrerit ante consectetur.
-      </p>
-    </div>
-
-    <div>
-      <h2>Etiam et posuere sem</h2>
-      <p>published: February 2, 2018</p>
-      <p> Cras egestas tempus risus, quis auctor ligula interdum sit amet. Fusce luctus neque ut leo facilisis, ut posuere urna finibus. Pellentesque aliquam nisl nec hendrerit ornare. Vestibulum vitae fermentum nunc. Duis sed sapien et enim volutpat vulputate id sit amet nibh. Duis porta tortor ex, vitae accumsan magna ultrices eget. Maecenas a erat aliquet, molestie tellus in, rutrum nunc. Sed eget elit sit amet massa fringilla elementum. Curabitur ac metus ac massa maximus aliquet vitae ac eros. Maecenas bibendum enim erat, vel venenatis ante maximus id.
-
-Sed vestibulum elit condimentum, pellentesque nulla sed, accumsan enim. Etiam euismod elit massa, quis gravida mi euismod id. Donec ultricies et magna ac cursus. Nulla at vulputate massa. Nulla facilisi. Mauris turpis diam, ullamcorper quis est interdum, condimentum suscipit mi. Nunc porttitor urna vitae lectus eleifend tempus. Mauris sem diam, mattis sit amet lorem semper, tempor aliquet metus. Aenean mollis a magna at auctor. In nisi diam, elementum vitae augue id, pellentesque bibendum urna. Ut ut erat mattis, sagittis nunc sed, sodales diam. Fusce pretium nunc leo, id porttitor turpis viverra ac. Donec efficitur, elit non sollicitudin dignissim, erat dui suscipit massa, non ullamcorper sapien quam sed lorem.
-
-Vestibulum pellentesque, purus a placerat lobortis, orci purus rutrum mi, in tincidunt elit massa at risus. Sed aliquam risus id urna mattis, sit amet rutrum libero fermentum. Aliquam erat volutpat. Quisque pellentesque imperdiet sapien sed hendrerit. Morbi varius mauris ac ornare malesuada. Donec congue pulvinar ullamcorper.
-
-      </p>
-    </div>
+{% for post in posts %}
+  <div>
+      <p>published: {{ post.published_date }}</p>
+      <h1><a href="">{{ post.title }}</a></h1>
+      <p>{{ post.text|linebreaksbr }}</p>
+  </div>
+{% endfor %}
 
   </body>
 </html>
